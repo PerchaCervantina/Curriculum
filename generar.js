@@ -21,7 +21,7 @@ function filas(pares) {
 function entrada(izq, sub, fechas, cuerpo) {
   return `<div class="entrada">
     <div class="cab"><strong>${esc(izq)}</strong><span>${esc(fechas)}</span></div>
-    <div class="sub">${esc(sub)}</div>${cuerpo || ''}</div>`;
+    ${sub ? `<div class="sub">${esc(sub)}</div>` : ''}${cuerpo || ''}</div>`;
 }
 
 const p = d.personales;

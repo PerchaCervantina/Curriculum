@@ -13,15 +13,11 @@
       ],
       [
         "Teléfono",
-        "[+00 000 000 000]"
+        "670 394 588"
       ],
       [
         "Correo electrónico",
-        "[correo@ejemplo.com]"
-      ],
-      [
-        "LinkedIn",
-        "[linkedin.com/in/usuario]"
+        "hugorejfer@gmail.com"
       ]
     ],
     "foto": ""
@@ -29,56 +25,51 @@
   "academicos": [
     {
       "titulo": "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)",
-      "institucion": "[Centro educativo], [Localidad]",
+      "institucion": "IES Donoso Cortés, Don Benito (Badajoz)",
       "fechas": "2025 – actualidad",
       "detalle": "Cursando 2.º curso."
     },
     {
       "titulo": "Bachillerato de Ciencias",
-      "institucion": "[Centro educativo], [Localidad]",
+      "institucion": "IES San José, Villanueva de la Serena (Badajoz)",
       "fechas": "2023 – 2025",
       "detalle": ""
     },
     {
       "titulo": "Educación Secundaria Obligatoria (ESO)",
-      "institucion": "[Centro educativo], [Localidad]",
+      "institucion": "IES San José, Villanueva de la Serena (Badajoz)",
       "fechas": "2019 – 2023",
       "detalle": ""
     },
     {
       "titulo": "Curso de Monitor de Ocio y Tiempo Libre",
-      "institucion": "[Entidad organizadora], [Localidad]",
+      "institucion": "",
       "fechas": "2023",
       "detalle": "Formación complementaria cursada (sin titulación)."
     }
   ],
   "profesionales": [
     {
-      "puesto": "[Puesto]",
-      "empresa": "Making Robots, Don Benito (Badajoz)",
+      "puesto": "Monitor",
+      "empresa": "Making Robots, Villanueva de la Serena y Don Benito (Badajoz)",
       "fechas": "2025 (6 meses)",
       "funciones": [
-        "[Función o tarea principal]",
-        "[Otra función o tarea]"
+        "Monitor en las academias de Villanueva de la Serena y Don Benito."
       ]
     }
   ],
   "interes": [
     [
       "Idiomas",
-      "[Español (nativo), Inglés (nivel)]"
+      "Español (nativo). [Inglés – nivel]"
     ],
     [
       "Informática",
-      "[Programas y herramientas]"
+      "[Lenguajes y herramientas]"
     ],
     [
       "Habilidades",
-      "[Responsabilidad, trabajo en equipo, ...]"
-    ],
-    [
-      "Otros",
-      "[Licencia de conducir, disponibilidad, ...]"
+      "Facilidad para los idiomas y disposición para perfeccionarlos y aprender otros nuevos."
     ]
   ]
 }
