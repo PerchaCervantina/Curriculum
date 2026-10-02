@@ -46,26 +46,46 @@
       "institucion": "",
       "fechas": "2023",
       "detalle": "Formación complementaria cursada (sin titulación)."
+    },
+    {
+      "titulo": "Alumno de robótica y programación",
+      "institucion": "Making Robots, Villanueva de la Serena (Badajoz)",
+      "fechas": "10 años",
+      "detalle": ""
     }
   ],
   "profesionales": [
     {
-      "puesto": "Monitor",
+      "puesto": "Monitor de robótica y programación",
       "empresa": "Making Robots, Villanueva de la Serena y Don Benito (Badajoz)",
-      "fechas": "2025 (6 meses)",
+      "fechas": "09/2025 – 02/2026",
       "funciones": [
-        "Monitor en las academias de Villanueva de la Serena y Don Benito."
+        "Impartición de clases de robótica y programación a niños con LEGO WeDo 2.0, LEGO MINDSTORMS EV3 y LEGO SPIKE.",
+        "Preparación de las actividades de cada sesión.",
+        "Trabajo en las academias de Villanueva de la Serena y Don Benito."
+      ]
+    },
+    {
+      "puesto": "Monitor en prácticas",
+      "empresa": "Making Robots, Villanueva de la Serena y Don Benito (Badajoz)",
+      "fechas": "06/2025 – 08/2025",
+      "funciones": [
+        "Periodo de prácticas de tres meses previo a la incorporación como monitor."
       ]
     }
   ],
   "interes": [
     [
       "Idiomas",
-      "Español (nativo). [Inglés – nivel]"
+      "Español: nativo. Inglés: nivel B2 (sin certificación oficial). Francés: nociones básicas."
     ],
     [
       "Informática",
-      "[Lenguajes y herramientas]"
+      "Java, Kotlin, SQL y HTML/CSS. En aprendizaje: Android Studio y C."
+    ],
+    [
+      "Robótica",
+      "LEGO WeDo 2.0, LEGO MINDSTORMS EV3 y LEGO SPIKE."
     ],
     [
       "Habilidades",
