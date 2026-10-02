@@ -1,13 +1,28 @@
 {
   "personales": {
-    "nombre": "[Nombre y Apellidos]",
-    "titular": "[Profesión u objetivo profesional]",
+    "nombre": "Hugo Rejas Fernández",
+    "titular": "Estudiante de Desarrollo de Aplicaciones Multiplataforma",
     "campos": [
-      ["Fecha de nacimiento", "[dd/mm/aaaa]"],
-      ["Residencia", "[Ciudad, País]"],
-      ["Teléfono", "[+00 000 000 000]"],
-      ["Correo electrónico", "[correo@ejemplo.com]"],
-      ["LinkedIn", "[linkedin.com/in/usuario]"]
+      [
+        "Fecha de nacimiento",
+        "1 de febrero de 2007"
+      ],
+      [
+        "Residencia",
+        "Villanueva de la Serena (Badajoz), Extremadura, España"
+      ],
+      [
+        "Teléfono",
+        "[+00 000 000 000]"
+      ],
+      [
+        "Correo electrónico",
+        "[correo@ejemplo.com]"
+      ],
+      [
+        "LinkedIn",
+        "[linkedin.com/in/usuario]"
+      ]
     ],
     "foto": ""
   },
@@ -24,13 +39,28 @@
       "puesto": "[Puesto]",
       "empresa": "[Empresa, Ciudad]",
       "fechas": "[mm/aaaa – mm/aaaa]",
-      "funciones": ["[Función o logro principal]", "[Otra función o logro]"]
+      "funciones": [
+        "[Función o logro principal]",
+        "[Otra función o logro]"
+      ]
     }
   ],
   "interes": [
-    ["Idiomas", "[Español (nativo), Inglés (nivel)]"],
-    ["Informática", "[Programas y herramientas]"],
-    ["Habilidades", "[Responsabilidad, trabajo en equipo, ...]"],
-    ["Otros", "[Licencia de conducir, disponibilidad, ...]"]
+    [
+      "Idiomas",
+      "[Español (nativo), Inglés (nivel)]"
+    ],
+    [
+      "Informática",
+      "[Programas y herramientas]"
+    ],
+    [
+      "Habilidades",
+      "[Responsabilidad, trabajo en equipo, ...]"
+    ],
+    [
+      "Otros",
+      "[Licencia de conducir, disponibilidad, ...]"
+    ]
   ]
 }
