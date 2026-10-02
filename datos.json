@@ -20,7 +20,8 @@
         "hugorejfer@gmail.com"
       ]
     ],
-    "foto": ""
+    "foto": "",
+    "sobre_mi": "Llevo media vida entre robots: entré en Making Robots de pequeño como alumno y, diez años después, era yo quien daba las clases. Ahora estoy en 2.º de DAM y lo que quiero es dedicarme a hacer aplicaciones. No me cuesta ponerme con algo que no conozco, ya sea un lenguaje de programación o un idioma."
   },
   "academicos": [
     {
@@ -45,13 +46,13 @@
       "titulo": "Curso de Monitor de Ocio y Tiempo Libre",
       "institucion": "",
       "fechas": "2023",
-      "detalle": "Formación complementaria cursada (sin titulación)."
+      "detalle": "Lo hice entero, pero no llegué a sacar el título."
     },
     {
       "titulo": "Alumno de robótica y programación",
       "institucion": "Making Robots, Villanueva de la Serena (Badajoz)",
       "fechas": "10 años",
-      "detalle": ""
+      "detalle": "Empecé como alumno y acabé trabajando allí como monitor."
     }
   ],
   "profesionales": [
@@ -60,9 +61,9 @@
       "empresa": "Making Robots, Villanueva de la Serena y Don Benito (Badajoz)",
       "fechas": "09/2025 – 02/2026",
       "funciones": [
-        "Impartición de clases de robótica y programación a niños con LEGO WeDo 2.0, LEGO MINDSTORMS EV3 y LEGO SPIKE.",
-        "Preparación de las actividades de cada sesión.",
-        "Trabajo en las academias de Villanueva de la Serena y Don Benito."
+        "Daba clases de robótica y programación a niños con LEGO WeDo 2.0, EV3 y SPIKE.",
+        "Preparaba yo mismo las actividades de cada sesión.",
+        "Iba alternando entre la academia de Villanueva de la Serena y la de Don Benito."
       ]
     },
     {
@@ -70,26 +71,26 @@
       "empresa": "Making Robots, Villanueva de la Serena y Don Benito (Badajoz)",
       "fechas": "06/2025 – 08/2025",
       "funciones": [
-        "Periodo de prácticas de tres meses previo a la incorporación como monitor."
+        "Tres meses de verano de prácticas, justo antes de que me contrataran como monitor."
       ]
     }
   ],
   "interes": [
     [
       "Idiomas",
-      "Español: nativo. Inglés: nivel B2 (sin certificación oficial). Francés: nociones básicas."
+      "Español: nativo. Inglés: B2, el nivel de Bachillerato (sin certificado oficial). Francés: básico, aunque se me da bien y quiero mejorarlo."
     ],
     [
       "Informática",
-      "Java, Kotlin, SQL y HTML/CSS. En aprendizaje: Android Studio y C."
+      "Java, Kotlin, SQL y HTML/CSS. Ahora mismo estoy aprendiendo Android Studio y C."
     ],
     [
       "Robótica",
-      "LEGO WeDo 2.0, LEGO MINDSTORMS EV3 y LEGO SPIKE."
+      "LEGO WeDo 2.0, LEGO MINDSTORMS EV3 y LEGO SPIKE, tanto programándolos como enseñando a usarlos."
     ],
     [
       "Habilidades",
-      "Facilidad para los idiomas y disposición para perfeccionarlos y aprender otros nuevos."
+      "Aprendo rápido y los idiomas se me dan bien; si hace falta uno nuevo, me pongo con él."
     ]
   ]
 }

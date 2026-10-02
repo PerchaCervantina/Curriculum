@@ -34,30 +34,31 @@ const foto = p.foto
 const html = `<!doctype html>
 <html lang="es"><head><meta charset="utf-8"><title>Currículum – ${esc(p.nombre)}</title>
 <style>
-  @page { size: A4; margin: 18mm 20mm; }
+  @page { size: A4; margin: 14mm 18mm; }
   * { box-sizing: border-box; }
-  body { font-family: "Liberation Serif", "Times New Roman", Times, serif; font-size: 11pt;
+  body { font-family: "Liberation Serif", "Times New Roman", Times, serif; font-size: 10.5pt;
          color: #111; line-height: 1.35; margin: 0; }
   header { display: flex; justify-content: space-between; align-items: center;
            border-bottom: 1.5pt solid #111; padding-bottom: 8pt; margin-bottom: 4pt; }
   h1 { font-size: 22pt; margin: 0; letter-spacing: 1pt; text-transform: uppercase; font-weight: bold; }
   .titular { font-style: italic; font-size: 12pt; margin-top: 2pt; }
   .foto { width: 28mm; height: 35mm; object-fit: cover; border: 0.5pt solid #111; }
-  h2 { font-size: 12pt; text-transform: uppercase; letter-spacing: 1.5pt; margin: 14pt 0 6pt;
+  h2 { font-size: 12pt; text-transform: uppercase; letter-spacing: 1.5pt; margin: 11pt 0 5pt;
        border-bottom: 0.5pt solid #111; padding-bottom: 2pt; }
   table.campos { border-collapse: collapse; width: 100%; }
   table.campos th { text-align: left; font-weight: bold; width: 38mm; padding: 1.5pt 0; vertical-align: top; }
   table.campos td { padding: 1.5pt 0; }
-  .entrada { margin-bottom: 8pt; break-inside: avoid; }
+  .entrada { margin-bottom: 6pt; break-inside: avoid; }
   .cab { display: flex; justify-content: space-between; }
   .cab span { font-style: italic; white-space: nowrap; margin-left: 8pt; }
   .sub { font-style: italic; }
   ul { margin: 3pt 0 0 0; padding-left: 14pt; }
   li { margin: 1pt 0; }
   p.detalle { margin: 2pt 0 0; }
+  p.sobre { margin: 8pt 0 0; text-align: justify; }
 </style></head><body>
 <header><div><h1>${esc(p.nombre)}</h1>${p.titular ? `<div class="titular">${esc(p.titular)}</div>` : ''}</div>${foto}</header>
-${seccion('Datos personales', filas(p.campos))}
+${seccion('Datos personales', filas(p.campos) + (p.sobre_mi ? `<p class="sobre">${esc(p.sobre_mi)}</p>` : ''))}
 ${seccion('Datos académicos', d.academicos
   .map((a) => entrada(a.titulo, a.institucion, a.fechas, a.detalle ? `<p class="detalle">${esc(a.detalle)}</p>` : ''))
   .join(''))}
