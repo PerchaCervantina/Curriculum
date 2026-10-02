@@ -28,20 +28,38 @@
   },
   "academicos": [
     {
-      "titulo": "[Título obtenido]",
-      "institucion": "[Institución, Ciudad]",
-      "fechas": "[Año – Año]",
+      "titulo": "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)",
+      "institucion": "[Centro educativo], [Localidad]",
+      "fechas": "2025 – actualidad",
+      "detalle": "Cursando 2.º curso."
+    },
+    {
+      "titulo": "Bachillerato de Ciencias",
+      "institucion": "[Centro educativo], [Localidad]",
+      "fechas": "2023 – 2025",
       "detalle": ""
+    },
+    {
+      "titulo": "Educación Secundaria Obligatoria (ESO)",
+      "institucion": "[Centro educativo], [Localidad]",
+      "fechas": "2019 – 2023",
+      "detalle": ""
+    },
+    {
+      "titulo": "Curso de Monitor de Ocio y Tiempo Libre",
+      "institucion": "[Entidad organizadora], [Localidad]",
+      "fechas": "2023",
+      "detalle": "Formación complementaria cursada (sin titulación)."
     }
   ],
   "profesionales": [
     {
       "puesto": "[Puesto]",
-      "empresa": "[Empresa, Ciudad]",
-      "fechas": "[mm/aaaa – mm/aaaa]",
+      "empresa": "Making Robots, Don Benito (Badajoz)",
+      "fechas": "2025 (6 meses)",
       "funciones": [
-        "[Función o logro principal]",
-        "[Otra función o logro]"
+        "[Función o tarea principal]",
+        "[Otra función o tarea]"
       ]
     }
   ],
