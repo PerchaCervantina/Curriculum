@@ -18,6 +18,15 @@ function filas(pares) {
     .join('')}</table>`;
 }
 
+function filas2(pares) {
+  const filasHtml = [];
+  for (let i = 0; i < pares.length; i += 2) {
+    filasHtml.push(`<tr>${pares.slice(i, i + 2)
+      .map(([k, v]) => `<th>${esc(k)}</th><td>${esc(v)}</td>`).join('')}</tr>`);
+  }
+  return `<table class="campos dos">${filasHtml.join('')}</table>`;
+}
+
 function entrada(izq, sub, fechas, cuerpo) {
   return `<div class="entrada">
     <div class="cab"><strong>${esc(izq)}</strong><span>${esc(fechas)}</span></div>
@@ -34,20 +43,22 @@ const foto = p.foto
 const html = `<!doctype html>
 <html lang="es"><head><meta charset="utf-8"><title>Currículum – ${esc(p.nombre)}</title>
 <style>
-  @page { size: A4; margin: 14mm 18mm; }
+  @page { size: A4; margin: 12mm 18mm; }
   * { box-sizing: border-box; }
   body { font-family: "Liberation Serif", "Times New Roman", Times, serif; font-size: 10.5pt;
-         color: #111; line-height: 1.35; margin: 0; }
+         color: #111; line-height: 1.27; margin: 0; }
   header { display: flex; justify-content: space-between; align-items: center;
            border-bottom: 1.5pt solid #111; padding-bottom: 8pt; margin-bottom: 4pt; }
   h1 { font-size: 22pt; margin: 0; letter-spacing: 1pt; text-transform: uppercase; font-weight: bold; }
   .titular { font-style: italic; font-size: 12pt; margin-top: 2pt; }
   .foto { width: 28mm; height: 35mm; object-fit: cover; border: 0.5pt solid #111; }
-  h2 { font-size: 12pt; text-transform: uppercase; letter-spacing: 1.5pt; margin: 11pt 0 5pt;
+  h2 { font-size: 12pt; text-transform: uppercase; letter-spacing: 1.5pt; margin: 9pt 0 4pt;
        border-bottom: 0.5pt solid #111; padding-bottom: 2pt; }
   table.campos { border-collapse: collapse; width: 100%; }
   table.campos th { text-align: left; font-weight: bold; width: 38mm; padding: 1.5pt 0; vertical-align: top; }
   table.campos td { padding: 1.5pt 0; }
+  table.dos th { width: 33mm; }
+  table.dos td { padding-right: 6mm; }
   .entrada { margin-bottom: 6pt; break-inside: avoid; }
   .cab { display: flex; justify-content: space-between; }
   .cab span { font-style: italic; white-space: nowrap; margin-left: 8pt; }
@@ -55,6 +66,7 @@ const html = `<!doctype html>
   ul { margin: 3pt 0 0 0; padding-left: 14pt; }
   li { margin: 1pt 0; }
   p.detalle { margin: 2pt 0 0; }
+  h3 { font-size: 10.5pt; font-variant: small-caps; letter-spacing: 0.5pt; margin: 8pt 0 4pt; }
   p.sobre { margin: 8pt 0 0; text-align: justify; }
 </style></head><body>
 <header><div><h1>${esc(p.nombre)}</h1>${p.titular ? `<div class="titular">${esc(p.titular)}</div>` : ''}</div>${foto}</header>
@@ -65,7 +77,9 @@ ${seccion('Datos académicos', d.academicos
 ${seccion('Datos profesionales', d.profesionales
   .map((e) => entrada(e.puesto, e.empresa, e.fechas,
     e.funciones && e.funciones.length ? `<ul>${e.funciones.map((f) => `<li>${esc(f)}</li>`).join('')}</ul>` : ''))
-  .join(''))}
+  .join('') + (d.proyectos && d.proyectos.length ? `<h3>Proyectos personales</h3>` + d.proyectos
+  .map((pr) => entrada(pr.nombre, '', `${pr.tipo} · ${pr.estado}`, `<p class="detalle">${esc(pr.descripcion)}</p>`))
+  .join('') : ''))}
 ${seccion('Datos de interés', filas(d.interes))}
 </body></html>`;
 

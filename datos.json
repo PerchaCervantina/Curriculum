@@ -27,8 +27,8 @@
     {
       "titulo": "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)",
       "institucion": "IES Donoso Cortés, Don Benito (Badajoz)",
-      "fechas": "2025 – actualidad",
-      "detalle": "Cursando 2.º curso."
+      "fechas": "2025 – actualidad (2.º curso)",
+      "detalle": ""
     },
     {
       "titulo": "Bachillerato de Ciencias",
@@ -78,19 +78,29 @@
   "interes": [
     [
       "Idiomas",
-      "Español: nativo. Inglés: B2, el nivel de Bachillerato (sin certificado oficial). Francés: básico, aunque se me da bien y quiero mejorarlo."
+      "Español: nativo. Inglés: B2 (nivel de Bachillerato, sin certificado). Francés: básico."
     ],
     [
       "Informática",
-      "Java, Kotlin, SQL y HTML/CSS. Ahora mismo estoy aprendiendo Android Studio y C."
+      "Java, Kotlin, SQL y HTML/CSS; ahora mismo aprendiendo Android Studio y C. Robótica educativa con LEGO WeDo 2.0, EV3 y SPIKE."
     ],
     [
-      "Robótica",
-      "LEGO WeDo 2.0, LEGO MINDSTORMS EV3 y LEGO SPIKE, tanto programándolos como enseñando a usarlos."
-    ],
-    [
-      "Habilidades",
-      "Aprendo rápido y los idiomas se me dan bien; si hace falta uno nuevo, me pongo con él."
+      "Aficiones",
+      "Videojuegos y programación. Más adelante quiero seguir estudiando, dentro y fuera de la informática."
     ]
+  ],
+  "proyectos": [
+    {
+      "nombre": "Heartlesses Unbound Genetics (HUG)",
+      "tipo": "Videojuego gacha",
+      "estado": "En desarrollo",
+      "descripcion": "Lo estoy haciendo por mi cuenta y ahora mismo lo tengo a medias."
+    },
+    {
+      "nombre": "App para personas con dificultades alimenticias",
+      "tipo": "Aplicación con agente de IA",
+      "estado": "En fase de idea",
+      "descripcion": "Quiero que quien tiene problemas con la comida pueda hacer la compra sin dudas sobre lo que lleva cada producto, con un agente de IA que la diferencie de las apps que ya existen."
+    }
   ]
 }
