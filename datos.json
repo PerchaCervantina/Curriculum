@@ -99,7 +99,8 @@
       ],
       "aprendiendo": [
         "Android Studio",
-        "C"
+        "Unity",
+        "C#"
       ]
     },
     "robotica": [
@@ -112,15 +113,15 @@
   "proyectos": [
     {
       "nombre": "Heartlesses Unbound Genetics (HUG)",
-      "tipo": "Videojuego gacha",
+      "tipo": "Videojuego gacha · Unity y C#",
       "estado": "En desarrollo",
-      "descripcion": "Lo estoy haciendo por mi cuenta y ahora mismo lo tengo a medias."
+      "descripcion": "Lo estoy haciendo por mi cuenta en Unity, que es lo que me ha llevado a aprender C#. Ahora mismo lo tengo a medias."
     },
     {
-      "nombre": "App para personas con dificultades alimenticias",
+      "nombre": "App para personas con alergias e intolerancias",
       "tipo": "Aplicación con agente de IA",
       "estado": "En fase de idea",
-      "descripcion": "Quiero que quien tiene problemas con la comida pueda hacer la compra sin dudas sobre lo que lleva cada producto, con un agente de IA que la diferencie de las apps que ya existen."
+      "descripcion": "Antes de comprar un producto, la app revisa sus ingredientes y te dice si lo puedes tomar o no. Quiero que lo haga un agente de IA, para que no queden dudas como pasa con otras apps."
     }
   ]
 }
