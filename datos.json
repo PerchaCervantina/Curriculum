@@ -75,20 +75,40 @@
       ]
     }
   ],
-  "interes": [
-    [
-      "Idiomas",
-      "Español: nativo. Inglés: B2 (nivel de Bachillerato, sin certificado). Francés: básico."
+  "interes": {
+    "idiomas": [
+      [
+        "Español",
+        "Nativo"
+      ],
+      [
+        "Inglés",
+        "B2 · nivel de Bachillerato, sin certificado"
+      ],
+      [
+        "Francés",
+        "Básico, pero se me da bien"
+      ]
     ],
-    [
-      "Informática",
-      "Java, Kotlin, SQL y HTML/CSS; ahora mismo aprendiendo Android Studio y C. Robótica educativa con LEGO WeDo 2.0, EV3 y SPIKE."
+    "informatica": {
+      "domino": [
+        "Java",
+        "Kotlin",
+        "SQL",
+        "HTML/CSS"
+      ],
+      "aprendiendo": [
+        "Android Studio",
+        "C"
+      ]
+    },
+    "robotica": [
+      "LEGO WeDo 2.0",
+      "LEGO EV3",
+      "LEGO SPIKE"
     ],
-    [
-      "Aficiones",
-      "Videojuegos y programación. Más adelante quiero seguir estudiando, dentro y fuera de la informática."
-    ]
-  ],
+    "aficiones": "Videojuegos y programación. Más adelante quiero seguir estudiando, dentro y fuera de la informática."
+  },
   "proyectos": [
     {
       "nombre": "Heartlesses Unbound Genetics (HUG)",
