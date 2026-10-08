@@ -56,8 +56,15 @@ const seccion = (titulo, contenido) => `<section><h2>${titulo}</h2>${contenido}<
 
 const p = d.personales;
 const campo = (k) => (p.campos.find(([c]) => c === k) || [])[1];
-const contacto = [campo('Residencia') && campo('Residencia').replace(/, España$/, ''), campo('Teléfono'), campo('Correo electrónico')]
-  .filter(Boolean).map(esc).join(' &nbsp;<span class="sep">·</span>&nbsp; ');
+const correo = campo('Correo electrónico');
+const github = campo('GitHub');
+const contacto = [
+  campo('Residencia') && esc(campo('Residencia').replace(/, Extremadura, España$/, '').replace(/, España$/, '')),
+  campo('Teléfono') && esc(campo('Teléfono')),
+  correo && `<a href="mailto:${esc(correo)}">${esc(correo)}</a>`,
+].filter(Boolean).join(' &nbsp;<span class="sep">·</span>&nbsp; ')
+  // El GitHub va en su propia línea para que la de contacto no se parta.
+  + (github ? `<br><a href="https://${esc(github.replace(/^https?:\/\//, ''))}">${esc(github)}</a>` : '');
 
 const educacion = agrupar(d.academicos, 'institucion').map((g) => {
   const [centro, lugar] = separar(g.clave);
@@ -101,6 +108,7 @@ const html = `<!doctype html>
        margin: 0; line-height: 1.1; }
   .titular { color: var(--acento); font-weight: 600; margin-top: 2pt; }
   .contacto { color: var(--suave); margin-top: 3pt; }
+  a { color: inherit; text-decoration: none; }
   .contacto .sep { color: var(--acento); font-weight: 700; }
   header::after { content: ''; display: block; width: 18mm; height: 2.5pt; background: var(--acento);
                   margin: 8pt auto 0; border-radius: 2pt; }
