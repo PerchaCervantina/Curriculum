@@ -7,6 +7,20 @@ const path = require('path');
 const dir = __dirname;
 const d = JSON.parse(fs.readFileSync(path.join(dir, 'datos.json'), 'utf8'));
 
+// Fuentes incrustadas desde fuentes/ (las mismas que la versión con diseño).
+function fuente(familia, archivo, peso, estilo = 'normal') {
+  const b64 = fs.readFileSync(path.join(dir, 'fuentes', archivo)).toString('base64');
+  return `@font-face { font-family: '${familia}'; font-weight: ${peso}; font-style: ${estilo};
+    src: url(data:font/ttf;base64,${b64}) format('truetype'); }`;
+}
+const fuentes = [
+  fuente('Inter', 'Inter-400.ttf', 400),
+  fuente('Inter', 'Inter-400i.ttf', 400, 'italic'),
+  fuente('Inter', 'Inter-600.ttf', 600),
+  fuente('Inter', 'Inter-700.ttf', 700),
+  fuente('Space Grotesk', 'SpaceGrotesk-700.ttf', 700),
+].join('\n');
+
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 // "09/2025 – 02/2026" -> "sept. 2025 – feb. 2026"
@@ -43,12 +57,12 @@ const seccion = (titulo, contenido) => `<section><h2>${titulo}</h2>${contenido}<
 const p = d.personales;
 const campo = (k) => (p.campos.find(([c]) => c === k) || [])[1];
 const contacto = [campo('Residencia') && campo('Residencia').replace(/, España$/, ''), campo('Teléfono'), campo('Correo electrónico')]
-  .filter(Boolean).map(esc).join(' &nbsp;·&nbsp; ');
+  .filter(Boolean).map(esc).join(' &nbsp;<span class="sep">·</span>&nbsp; ');
 
 const educacion = agrupar(d.academicos, 'institucion').map((g) => {
   const [centro, lugar] = separar(g.clave);
   if (!g.clave) {
-    return g.items.map((a) => `<div class="bloque">${fila(`<b>${esc(a.titulo)}</b>`, esc(fecha(a.fechas)), '')}
+    return g.items.map((a) => `<div class="bloque">${fila(`<b>${esc(a.titulo)}</b>`, esc(fecha(a.fechas)), 'sub')}
       ${vinetas(a.detalle ? [a.detalle] : [])}</div>`).join('');
   }
   return `<div class="bloque">${fila(`<b>${esc(centro)}</b>`, esc(lugar), '')}
@@ -77,25 +91,36 @@ const habilidades = `<ul class="lineas">
 const html = `<!doctype html>
 <html lang="es"><head><meta charset="utf-8"><title>Currículum – ${esc(p.nombre)}</title>
 <style>
-  @page { size: A4; margin: 16mm 18mm; }
+  ${fuentes}
+  :root { --oscuro: #16243a; --acento: #2a9d8f; --suave: #5b6876; --texto: #1f2933; }
+  @page { size: A4; margin: 14mm 17mm; }
   * { box-sizing: border-box; }
-  body { font-family: "Liberation Serif", "Times New Roman", Times, serif; font-size: 11pt;
-         line-height: 1.3; color: #000; margin: 0; }
-  h1 { text-align: center; font-size: 18pt; margin: 0; }
-  .contacto { text-align: center; margin: 3pt 0 6pt; }
-  h2 { font-size: 11pt; text-transform: uppercase; margin: 11pt 0 5pt; padding-bottom: 1.5pt;
-       border-bottom: 0.8pt solid #000; }
+  body { font-family: 'Inter', sans-serif; font-size: 9.8pt; line-height: 1.38; color: var(--texto); margin: 0; }
+  header { text-align: center; padding-bottom: 7pt; margin-bottom: 2pt; }
+  h1 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 24pt; color: var(--oscuro);
+       margin: 0; line-height: 1.1; }
+  .titular { color: var(--acento); font-weight: 600; margin-top: 2pt; }
+  .contacto { color: var(--suave); margin-top: 3pt; }
+  .contacto .sep { color: var(--acento); font-weight: 700; }
+  header::after { content: ''; display: block; width: 18mm; height: 2.5pt; background: var(--acento);
+                  margin: 8pt auto 0; border-radius: 2pt; }
+  h2 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 11.5pt; color: var(--oscuro);
+       text-transform: uppercase; margin: 11pt 0 5pt; padding-bottom: 2pt; border-bottom: 1.2pt solid var(--acento); }
   .bloque { margin-bottom: 6pt; break-inside: avoid; }
   .fila { display: flex; justify-content: space-between; gap: 10pt; }
-  .fila span:last-child { white-space: nowrap; }
-  .fila.sub span:last-child { font-style: italic; }
-  ul { margin: 1pt 0 3pt; padding-left: 16pt; }
+  .fila b { color: var(--oscuro); }
+  .fila span:last-child { white-space: nowrap; color: var(--suave); }
+  .fila.sub i { color: var(--texto); }
+  .fila.sub span:last-child { color: var(--acento); font-weight: 600; font-size: 9pt; }
+  ul { margin: 1.5pt 0 3pt; padding-left: 15pt; }
   li { margin: 0.5pt 0; }
+  li::marker { color: var(--acento); }
   ul.lineas { list-style: none; padding-left: 0; }
-  ul.lineas li { margin: 2pt 0; }
+  ul.lineas li { margin: 2.5pt 0; }
+  ul.lineas b { color: var(--oscuro); }
 </style></head><body>
-<h1>${esc(p.nombre)}</h1>
-<div class="contacto">${contacto}</div>
+<header><h1>${esc(p.nombre)}</h1>${p.titular ? `<div class="titular">${esc(p.titular)}</div>` : ''}
+<div class="contacto">${contacto}</div></header>
 ${seccion('Educación', educacion)}
 ${seccion('Experiencia', experiencia)}
 ${proyectos ? seccion('Proyectos personales', proyectos) : ''}
@@ -111,7 +136,8 @@ fs.writeFileSync(path.join(dir, 'curriculum-harvard.html'), html);
   const browser = await chromium.launch();
   const page = await browser.newPage();
   await page.setContent(html, { waitUntil: 'load' });
-  await page.pdf({ path: path.join(dir, 'curriculum-harvard.pdf'), format: 'A4', preferCSSPageSize: true });
+  await page.evaluate(() => document.fonts.ready);
+  await page.pdf({ path: path.join(dir, 'curriculum-harvard.pdf'), format: 'A4', preferCSSPageSize: true, printBackground: true });
   await browser.close();
   console.log('Generado curriculum-harvard.pdf');
 })();
